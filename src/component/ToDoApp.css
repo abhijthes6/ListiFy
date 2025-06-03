@@ -1,0 +1,245 @@
+body{
+    background: linear-gradient(to right, #e37c78c5, #006078c5),url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150849915.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif; 
+}
+*{
+    box-sizing: border-box;
+
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    width: 40%;
+    margin: 50px auto;
+    height: 80vh;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: grey solid 3px; */
+    border-radius: 10px;
+}
+#heading h1{
+    margin: 0;
+    line-height: 1;
+
+}
+.head{
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to right, #E37C78,#006078);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+#id, #form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    background: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.head input:focus{
+    outline: none;
+    color: white;
+}
+.head input::placeholder{
+    color: rgba(255, 255, 255, 0.734);
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head button{
+    width: 10%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f0f0f000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff;
+}
+.Item{
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  border: #f0f0f08f transparent 6px;
+  border-radius: 20px;
+}
+ul{
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+
+.itemlist, .bought-list{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.itemlist{
+    z-index: 2;
+}
+.bought-list{
+    transform: rotateY(180deg);
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+
+ul li{
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    background-color: #434343;
+    color: white;
+    font-size: 24px;
+}
+.itemlist li{
+    background: linear-gradient(to right, #E37C78,#6f403e);
+    color: white;
+}
+.bought-list li{
+    background: linear-gradient(to right, #006078,#01485a);
+    color: white;
+}
+
+i{
+    cursor: pointer;
+    color: #f0f0f0;
+    font-size: 20px;
+}.bi{
+    color: #f0f0f0;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+span img{
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+.content{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.buy{
+    /* background-color: #000000; */
+    background-image: url('https://cdn-icons-png.flaticon.com/128/10514/10514523.png');
+    background-size: cover;
+    border-radius: 30%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+.bought{
+    background-image: url('https://cdn-icons-png.flaticon.com/128/18452/18452147.png');
+    background-size: cover;
+}
+
+h6{
+    margin: 0;
+    color: #f0f0f0;
+    font-size: 16px;
+}
+.clear{
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+.buttons{
+    margin-top: 10px;
+}
+.btn {
+    width: 120px;
+    padding: 10px;
+    background-color: #970505;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition:  0.6s ease;
+}
+#bought-btn{
+    background-color: #006078;
+}
+
+/* MEDIA QUERIES!!! */
+@media (max-width: 768px) {
+    .box{
+        width: 90%;
+        position: absolute;
+        top: 40%;
+    }
+    .head input{
+        width: 80%;
+    }
+    .head button{
+        width: 20%;
+    }
+    ul li{
+        font-size: 18px;
+    }
+}
